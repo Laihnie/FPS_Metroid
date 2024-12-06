@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Splines;
 
 public class GunController : MonoBehaviour
 {
+
     [Header("References")]
     [SerializeField] private GunProjectile m_ProjectilePrefab;
     [SerializeField] private Transform m_shootingSpot;
@@ -56,7 +58,7 @@ public class GunController : MonoBehaviour
         }
         else
         {
-            m_targetPos = ray.direction * 20;
+            m_targetPos = ray.direction * 60;
         }
     }
 
