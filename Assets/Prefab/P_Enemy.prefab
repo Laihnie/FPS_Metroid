@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8475280627108131819}
   - component: {fileID: 6677222834779802001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 5458431313127165440}
   - component: {fileID: 4680049975475799929}
   - component: {fileID: 6426690295626620634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4957,9 +4957,9 @@ GameObject:
   - component: {fileID: -1582627985926245473}
   - component: {fileID: 5639579263662471902}
   - component: {fileID: 3470746538049355837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5047,9 +5047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 28c15334c212350438050e19a83359e3, type: 2}
+    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
+    _objectReferences: []
 --- !u!1 &5687390186448561369
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,7 +5061,7 @@ GameObject:
   - component: {fileID: 4731754367150464134}
   - component: {fileID: 2052971980325185025}
   - component: {fileID: 13356339678528298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5170,7 +5169,7 @@ GameObject:
   - component: {fileID: 285979607986353156}
   - component: {fileID: 4567386256647005940}
   - component: {fileID: 3480798633468952051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5275,7 +5274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5473757649120860849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5312,7 +5311,7 @@ GameObject:
   - component: {fileID: 5519444641276143530}
   - component: {fileID: 1571622874257821616}
   - component: {fileID: 6995452486223835782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5417,7 +5416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6978404951216270479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,6 +7,7 @@ public class GunProjectile : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody m_rb;
+    [SerializeField] public int enemyLayer;
 
     [Header("Values")]
     [SerializeField] private float m_speed = 10.0f;
@@ -15,6 +16,10 @@ public class GunProjectile : MonoBehaviour
     [SerializeField] private float m_shootingDelay = 0.2f;
     [SerializeField] private float m_chargeDuration = 1;
     [SerializeField] private float m_lifeTime = 3;
+
+    [Header("SFX")]
+    [SerializeField] private ParticleSystem Hit_VFX;
+    [SerializeField] private ParticleSystem HitEnemy_VFX;
 
     private float m_currentChargeTime = 0;
     private bool m_hasReachedMaxCharge = false; 
@@ -64,8 +69,19 @@ public class GunProjectile : MonoBehaviour
         DestroyProjectile();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
         OnImpact();
+        if (other.gameObject.layer == enemyLayer)
+        {
+            HitEnemy_VFX.transform.parent = null;
+            HitEnemy_VFX.Play();
+        }
+
+        else
+        {
+            Hit_VFX.transform.parent = null;
+            Hit_VFX.Play();
+        }
     }
 }
