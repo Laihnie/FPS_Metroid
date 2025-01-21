@@ -58,7 +58,7 @@ public class GunController : MonoBehaviour
         }
         else
         {
-            m_targetPos = ray.direction * 60;
+            m_targetPos = ray.GetPoint(60);
         }
     }
 

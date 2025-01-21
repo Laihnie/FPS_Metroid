@@ -28,8 +28,9 @@ public class Rail_Enemy : MonoBehaviour
         {
             m_health = 0;
             DestroyEnemy();
+            ScoreManager.Instance.ScoreEnhance();
         }
-        ScoreManager.Instance.ScoreEnhance();
+
     }
 
     public void DestroyEnemy()
