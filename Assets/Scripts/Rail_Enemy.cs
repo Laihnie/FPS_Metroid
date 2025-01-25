@@ -23,12 +23,13 @@ public class Rail_Enemy : MonoBehaviour
     public void TakeDamage(float damage, float knockback, Transform damageSource)
     {
         m_health -= damage;
+        ScoreManager.Instance.ScoreEnhance();
 
-        if(m_health <= 0)
+        if (m_health <= 0)
         {
             m_health = 0;
             DestroyEnemy();
-            ScoreManager.Instance.ScoreEnhance();
+
         }
 
     }

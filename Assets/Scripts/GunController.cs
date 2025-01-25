@@ -9,7 +9,8 @@ public class GunController : MonoBehaviour
     [SerializeField] private GunProjectile m_ProjectilePrefab;
     [SerializeField] private Transform m_shootingSpot;
     [SerializeField] private Transform m_rotationPoint;
-
+    [SerializeField] private ParticleSystem m_LoadVFX;
+    
     [Header("Aim")]
     [SerializeField] private float m_rotationSpeed = 10;
     [SerializeField] private LayerMask m_hitLayers;
@@ -72,6 +73,7 @@ public class GunController : MonoBehaviour
     {
         m_isCharging = true;
         m_currentProjectile = InstantiateProjectile();
+        m_LoadVFX.Play();
     }
     
     private void OnMouseButtonUp()
@@ -79,6 +81,7 @@ public class GunController : MonoBehaviour
         m_isCharging = false;
         ShootProjectile(m_currentProjectile, m_shootingSpot.forward); // à retoucher
         m_currentProjectile = null;
+        m_LoadVFX.Stop();
     }
     private GunProjectile InstantiateProjectile()
     {
